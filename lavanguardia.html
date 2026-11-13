@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanguard Barber Studio | Estilo & Precisión</title>
+    <!-- Fuentes Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Iconos FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Estilos CSS Personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ==========================================
+         ENCABEZADO Y NAVEGACIÓN
+         ========================================== -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <i class="fa-solid fa-scissors"></i> VANGUARD<span>.</span>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="#inicio" class="nav-link">Inicio</a>
+          <a href="#servicios" class="nav-link">Servicios</a>
+          <a href="#galeria" class="nav-link">Galería</a>
+          <a href="#nosotros" class="nav-link">Nosotros</a>
+          <a href="#contacto" class="nav-link">Ubicación</a>
+          <button class="btn-primary modal-open-btn">Reservar Cita</button>
+        </nav>
+
+        <!-- Botón Hamburguesa para Móvil -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================
+         SECCIÓN HERO (INICIO)
+         ========================================== -->
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge">Estilo Urbano & Premium</div>
+        <h1>DEFINIMOS TU <span class="highlight">ACTITUD</span> Y ESTILO</h1>
+        <p>
+          Más que un corte de cabello, una experiencia de precisión y
+          arquitectura capilar de vanguardia.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary modal-open-btn">
+            <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+          </button>
+          <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">+5,000</span>
+            <span class="stat-label">Clientes Satisfechos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Precisión & Calidad</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4.9/5</span>
+            <span class="stat-label">Valoración Promedio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN DE SERVICIOS Y CATEGORÍAS (CORREGIDA)
+         ========================================== -->
+    <section id="servicios" class="services section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>NUESTROS <span class="highlight">SERVICIOS</span></h2>
+          <p>Descubre nuestras categorías y encuentra tu estilo.</p>
+        </div>
+
+        <!-- Carrusel de categorías dinámicas -->
+        <div class="categories-carousel" id="categories-container">
+          <p class="loading-categories">Cargando categorías...</p>
+        </div>
+
+        <!-- CAJA DONDE SE MUESTRAN LOS SERVICIOS (ESTA FALTABA) -->
+        <div
+          id="services-container"
+          class="services-grid"
+          style="margin-top: 40px"
+        ></div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN DE GALERÍA DE TRABAJOS (FILTRABLE)
+         ========================================== -->
+    <section id="galeria" class="gallery section-padding bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>GALERÍA DE <span class="highlight">ESTILOS</span></h2>
+          <p>
+            Explora nuestros trabajos recientes y elige el look que mejor encaje
+            contigo.
+          </p>
+        </div>
+
+        <!-- Filtros de Galería -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="cortes">Cortes</button>
+          <button class="filter-btn" data-filter="barba">Barba</button>
+          <button class="filter-btn" data-filter="color">
+            Color & Estilos
+          </button>
+        </div>
+
+        <!-- Grid de Imágenes de Galería -->
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="cortes">
+            <img
+              src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600"
+              alt="Corte Fade"
+            />
+            <div class="gallery-overlay">
+              <span>Skin Fade Mid</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="barba">
+            <img
+              src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=600"
+              alt="Ritual Barba"
+            />
+            <div class="gallery-overlay">
+              <span>Perfilado de Barba</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="cortes">
+            <img
+              src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600"
+              alt="Corte Pompadour"
+            />
+            <div class="gallery-overlay">
+              <span>Pompadour Moderno</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="color">
+            <img
+              src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=600"
+              alt="Tintura"
+            />
+            <div class="gallery-overlay">
+              <span>Platinado Vanguard</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="barba">
+            <img
+              src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&q=80&w=600"
+              alt="Barba Larga"
+            />
+            <div class="gallery-overlay">
+              <span>Diseño de Barba Larga</span>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="cortes">
+            <img
+              src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=600"
+              alt="Corte Buzz"
+            />
+            <div class="gallery-overlay">
+              <span>Crop Top Texturizado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN DE EQUIPO DE BARBEROS
+         ========================================== -->
+    <section id="nosotros" class="team section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>BARBEROS <span class="highlight">ESPECIALISTAS</span></h2>
+          <p>
+            Profesionales apasionados por los detalles y la excelencia visual.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400"
+              alt="Barbero Master"
+            />
+            <h3>Alex Rivera</h3>
+            <span class="role">Master Barber / Especialista en Fades</span>
+          </div>
+          <div class="team-card">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
+              alt="Especialista Barba"
+            />
+            <h3>Mateo Torres</h3>
+            <span class="role">Especialista en Barboterapia & Navaja</span>
+          </div>
+          <div class="team-card">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+              alt="Colorista"
+            />
+            <h3>David Silva</h3>
+            <span class="role">Stylist & Colorista Creativo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         UBICACIÓN Y CONTACTO
+         ========================================== -->
+    <section id="contacto" class="location section-padding bg-alt">
+      <div class="container">
+        <div class="location-wrapper">
+          <div class="location-info">
+            <h2>VISÍTANOS O <span class="highlight">CONTÁCTANOS</span></h2>
+            <p>
+              Estamos ubicados en el corazón de la ciudad. Reserva previa
+              recomendada para garantizar tu atención personalizada.
+            </p>
+
+            <ul class="info-list">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Dirección:</strong>
+                  <p>Av. Principal #452, Zona Central</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                  <strong>Horario de Atención:</strong>
+                  <p>
+                    Lun - Sáb: 08:00 AM - 08:00 PM<br />Dom: 9:00 AM - 04:00 PM
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <strong>Teléfono / WhatsApp:</strong>
+                  <p>+591 72795105</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mapa Simulado / Contenedor de Ubicación -->
+          <div class="map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.4725721111086!2d-66.1593!3d-17.3935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzM2LjYiUyA2NsKwMDknMzMuNSJX!5e0!3m2!1ses!2sbo!4v1620000000000!5m2!1ses!2sbo"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER / PIE DE PÁGINA
+         ========================================== -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>
+          &copy; 2026 Vanguard Barber Studio. Todos los derechos reservados.
+        </p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================
+         MODAL INTERACTIVO DE RESERVA DE CITAS
+         ========================================== -->
+    <div class="modal" id="booking-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-card">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <h3>RESERVA TU <span class="highlight">TURNO</span></h3>
+        <p class="modal-subtitle">
+          Completa los datos y confirmaremos tu cita vía WhatsApp
+        </p>
+
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="service-select">Servicio Deseado</label>
+            <select id="service-select" required>
+              <option value="">-- Selecciona un servicio --</option>
+              <option value="Corte Vanguard">Corte flowbarber (bs25)</option>
+              <option value="Ritual de Barba">Ritual de Barba (bs25)</option>
+              <option value="Combo Full Premium">
+                Combo Full Premium ($28.00)
+              </option>
+              <option value="Colorimetría & Tintes">
+                Colorimetría & Tintes ($25.00+)
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="barber-select">Barbero Preferido</label>
+            <select id="barber-select">
+              <option value="Cualquier Barbero Disponible">
+                Cualquier Barbero Disponible
+              </option>
+              <option value="Alex Rivera">Alex Rivera (Master Fades)</option>
+              <option value="Mateo Torres">Mateo Torres (Barboterapia)</option>
+              <option value="David Silva">David Silva (Colorista)</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-date">Fecha</label>
+              <input type="date" id="booking-date" required />
+            </div>
+            <div class="form-group">
+              <label for="booking-time">Hora</label>
+              <input type="time" id="booking-time" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="client-name">Nombre Completo</label>
+            <input
+              type="text"
+              id="client-name"
+              placeholder="Ej: Carlos Mendoza"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="client-phone">Número de WhatsApp</label>
+            <input
+              type="tel"
+              id="client-phone"
+              placeholder="Ej: +591 72795105"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-primary btn-block">
+            Confirmar y Enviar a WhatsApp <i class="fa-brands fa-whatsapp"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Archivo JS Personalizado -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
